@@ -63,7 +63,7 @@ export function registrarPedido(datosPedido) {
       }
 
       resolve({
-        mensaje: `Pedido registrado correctamente para ${datosPedido.nombre}`
+        mensaje: `Pedido registrado correctamente para ${datosPedido.nombre}. Total: $${datosPedido.total.toLocaleString('es-CO')}`
       });
 
     }, 1500);
