@@ -14,7 +14,7 @@
 
       <ul>
         <li><a href="#catalogo">Catálogo</a></li>
-        <li><a href="#carrito">Carrito <span id="carrito-badge" hidden>0</span></a></li>
+        <li><button id="carrito-toggle" class="btn-carrito-nav">Carrito <span id="carrito-badge" hidden>0</span></button></li>
         <li><a href="#pedido">Pedidos</a></li>
       </ul>
     </nav>
@@ -46,19 +46,6 @@
       <p id="estado-vacio" hidden>
         No hay productos disponibles en este momento.
       </p>
-    </section>
-
-    <section id="carrito" hidden>
-      <h2>Tu carrito</h2>
-
-      <div id="carrito-lista"></div>
-
-      <div id="carrito-total">
-        <p>Total: <span id="carrito-total-valor">$0</span></p>
-        <a href="#pedido"><button id="carrito-ir-pedido">Ir a confirmar pedido</button></a>
-      </div>
-
-      <p id="carrito-vacio" hidden>Tu carrito está vacío.</p>
     </section>
 
     <section id="pedido">
@@ -95,6 +82,25 @@
   <footer>
     <p>Crumbs & Love © 2026</p>
   </footer>
+
+  <aside id="carrito-sidebar">
+    <div id="carrito-header">
+      <h2>Tu carrito</h2>
+      <button id="carrito-cerrar">×</button>
+    </div>
+
+    <div id="carrito-cuerpo">
+      <div id="carrito-lista"></div>
+      <p id="carrito-vacio">Tu carrito está vacío.</p>
+    </div>
+
+    <div id="carrito-footer">
+      <p id="carrito-total">Total: <span id="carrito-total-valor">$0</span></p>
+      <button id="carrito-ir-pedido">Ir a confirmar pedido</button>
+    </div>
+  </aside>
+
+  <div id="carrito-overlay"></div>
 
   <script type="module" src="app.js"></script>
 </body>
