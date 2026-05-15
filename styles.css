@@ -69,6 +69,20 @@ nav a:hover {
   opacity: 0.7;
 }
 
+#carrito-badge {
+  display: inline-block;
+  background-color: var(--pink);
+  color: var(--brown);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 0.3rem;
+}
+
 /* ===== SECCIONES GENERALES ===== */
 
 section {
@@ -186,6 +200,120 @@ button:disabled {
 #estado-vacio {
   margin-top: 2rem;
   font-size: 1.1rem;
+}
+
+/* ===== CARRITO ===== */
+
+#carrito {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#carrito-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.carrito-item {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.carrito-item-info {
+  flex: 1;
+  min-width: 150px;
+}
+
+.carrito-item-info h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.carrito-item-info p {
+  color: var(--light-brown);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.cantidad-controles {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--cream);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.cantidad-controles button {
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  min-width: 40px;
+  background-color: var(--light-brown);
+}
+
+.cantidad-controles button:hover {
+  background-color: var(--brown);
+}
+
+.cantidad-valor {
+  min-width: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.carrito-subtotal {
+  font-weight: 600;
+  font-size: 1.1rem;
+  min-width: 120px;
+  text-align: right;
+  margin: 0;
+}
+
+.btn-eliminar {
+  background-color: var(--pink);
+  color: var(--brown);
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+}
+
+.btn-eliminar:hover {
+  background-color: #f0a7b8;
+}
+
+#carrito-total {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+#carrito-total p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+#carrito-total-valor {
+  color: var(--brown);
+  font-size: 1.5rem;
+}
+
+#carrito-ir-pedido {
+  padding: 0.8rem 1.5rem;
 }
 
 /* ===== PEDIDOS ===== */
@@ -314,6 +442,24 @@ footer {
   }
 
   button {
+    width: 100%;
+  }
+
+  .carrito-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .carrito-subtotal {
+    text-align: left;
+  }
+
+  #carrito-total {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #carrito-ir-pedido {
     width: 100%;
   }
 
